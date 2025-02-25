@@ -15,7 +15,7 @@ spring:
       driverClassName: org.h2.Driver
       username: sa
       password: password
-      jdbcUrl: jdbc:h2:mem:businessdb
+      jdbcUrl: jdbc:h2:mem:businessdb;INIT=RUNSCRIPT FROM 'src/main/resources/h2init.sql'
   h2:
     console:
       enabled: 'true'
