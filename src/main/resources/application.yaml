@@ -1,0 +1,23 @@
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    datasource:
+      jdbcUrl: jdbc:h2:mem:batchdb
+      username: sa
+      driverClassName: org.h2.Driver
+      password: password
+    initialize-schema: always
+    job:
+      names: myJob
+  business:
+    datasource:
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+      jdbcUrl: jdbc:h2:mem:businessdb
+  h2:
+    console:
+      enabled: 'true'
+  application:
+    name: 1DCCBatch
